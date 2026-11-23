@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FindIt – Campus Lost & Found</title>
+<link rel="stylesheet" href="style.css"></head><body><div class="wrap">
+<h1>FindIt</h1>
+<p class="sub">Report a lost or found item on campus and help it get back to its owner.</p>
+
+<form class="panel" id="f" novalidate>
+<h2>Report an item</h2>
+<div class="row">
+<div class="field"><label for="type">What happened?</label><select id="type"><option value="lost">I lost something</option><option value="found">I found something</option></select></div>
+<div class="field"><label for="name">Item name</label><input id="name" placeholder="Black umbrella" maxlength="60"></div>
+<div class="field"><label for="cat">Category</label><select id="cat"><option>Bags</option><option>Electronics</option><option>IDs &amp; cards</option><option>Clothing</option><option>Books</option><option>Other</option></select></div>
+<div class="field"><label for="loc">Place</label><input id="loc" placeholder="Library, 2nd floor" maxlength="60"></div>
+</div>
+<div class="field"><label for="desc">Details</label><textarea id="desc" placeholder="Color, brand, marks…" maxlength="300"></textarea></div>
+<div class="field"><label for="contact">Your contact (email or phone)</label><input id="contact" placeholder="name@school.edu" maxlength="60"></div>
+<button type="submit">Post report</button>
+<p class="err" id="err" role="alert"></p>
+</form>
+
+<div class="bar">
+<input id="q" type="search" placeholder="Search items or places" aria-label="Search">
+<select id="ft" aria-label="Filter"><option value="all">All</option><option value="lost">Lost</option><option value="found">Found</option><option value="open">Still open</option></select>
+</div>
+<div id="list" aria-live="polite"></div>
+</div>
+<script src="script.js"></script></body></html>

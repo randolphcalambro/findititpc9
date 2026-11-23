@@ -1,0 +1,30 @@
+:root{--bg:#eef1f4;--card:#fff;--ink:#14233a;--mute:#5a6b82;--line:#d5dce5;--lost:#c2410c;--found:#0f766e;--tag:#f6e7b4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1722;--card:#18222f;--ink:#e8eef6;--mute:#93a3b8;--line:#2a3646;--lost:#fb923c;--found:#2dd4bf;--tag:#3a3320;color-scheme:dark}}
+*{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Onest","Segoe UI",system-ui,sans-serif;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding:20px 16px 48px}
+h1{font-family:"Anton","Impact",sans-serif;font-weight:400;font-size:2.6rem;margin:8px 0 2px;letter-spacing:.01em}
+.sub{color:var(--mute);margin:0 0 18px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px}
+.panel h2{font-size:1.05rem;margin:0 0 10px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.row{grid-template-columns:1fr}}
+label{display:block;font-size:.85rem;color:var(--mute);margin-bottom:3px}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:9px}
+textarea{min-height:64px;resize:vertical}
+:focus-visible{outline:2px solid var(--found);outline-offset:2px}
+button{font:inherit;cursor:pointer;border:0;border-radius:6px;padding:10px 16px;background:var(--ink);color:var(--bg);font-weight:600}
+button.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);padding:6px 10px;font-weight:500}
+.field{margin-bottom:10px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.bar input{flex:1 1 180px}.bar select{flex:0 0 auto;width:auto}
+.item{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--lost);border-radius:8px;padding:12px 14px;margin-bottom:10px}
+.item.found{border-left-color:var(--found)}
+.item.claimed{opacity:.55}
+.top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.name{font-weight:700}
+.badge{background:var(--tag);border-radius:4px;padding:1px 8px;font-size:.8rem;font-weight:600;white-space:nowrap}
+.meta{color:var(--mute);font-size:.88rem;margin:2px 0 6px}
+.acts{display:flex;gap:6px;margin-top:8px}
+.empty{text-align:center;color:var(--mute);padding:28px 0}
+.err{color:var(--lost);font-size:.9rem;min-height:1.2em;margin:6px 0 0}
